@@ -2,11 +2,5 @@ language: java
 jdk:
 - openjdk8
 
-addons:
-    sonarcloud:
-        organization: federicavil
-        token: 00d1223d1041bc3bade4c92828a599f498848882
-
 script: 
--ant build
--sonar-scanner
+-maven build
