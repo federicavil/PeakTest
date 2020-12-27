@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import logic.model.DAOProvaFirebase;
 import logic.view.desktop.graphic_element.Page;
 
 public class MainGraphicController  {
@@ -23,6 +24,9 @@ public class MainGraphicController  {
 		//Pane view = Page.getPage("searchPathLayout");
 		//mainPane.setCenter(view); 
 		
+		DAOProvaFirebase daoProvaFirebase = new DAOProvaFirebase();
+		daoProvaFirebase.initializeConn();
+		daoProvaFirebase.saveOnDb();
 		switchPage("searchPathLayout");
 	}
 	
